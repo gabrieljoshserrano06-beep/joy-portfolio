@@ -1,0 +1,255 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+:root{
+--pink:#f4728c;
+--soft:#f6e8ec;
+--text:#2f2f2f;
+--shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+body{
+background:var(--soft);
+color:var(--text);
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+header{
+position:fixed;
+width:100%;
+top:0;
+background:#ffffffee;
+backdrop-filter:blur(10px);
+box-shadow:0 2px 12px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+nav{
+max-width:1100px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 20px;
+}
+
+.logo{
+color:var(--pink);
+font-weight:700;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#444;
+font-weight:500;
+}
+
+.menu-toggle{
+display:none;
+font-size:24px;
+cursor:pointer;
+}
+
+/* HERO */
+.hero{
+min-height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding-top:120px;
+background:linear-gradient(180deg,#f3dfe4,#f6e8ec);
+}
+
+.profile{
+width:160px;
+height:160px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:25px;
+box-shadow:0 12px 30px rgba(0,0,0,.15);
+}
+
+.hero h1{
+font-size:42px;
+max-width:800px;
+}
+
+.tagline{
+max-width:620px;
+margin:18px auto 28px;
+color:#555;
+}
+
+/* BUTTONS */
+.buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.buttons a{
+padding:14px 32px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+}
+
+.hire{
+background:var(--pink);
+color:white;
+}
+
+.resume{
+border:2px solid var(--pink);
+color:var(--pink);
+background:white;
+}
+
+/* SECTIONS */
+section{
+padding:100px 20px;
+text-align:center;
+}
+
+h2{
+color:var(--pink);
+margin-bottom:35px;
+}
+
+/* SERVICES */
+.cards{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:16px;
+box-shadow:var(--shadow);
+}
+
+/* EXPERIENCE */
+.soft{
+background:white;
+}
+
+.timeline{
+max-width:700px;
+margin:auto;
+text-align:left;
+}
+
+.job{
+background:#faf5f6;
+padding:22px;
+margin:15px 0;
+border-radius:14px;
+box-shadow:var(--shadow);
+}
+
+/* SKILLS */
+.skill{
+max-width:600px;
+margin:25px auto;
+text-align:left;
+}
+
+.bar{
+background:#e7d3d8;
+height:10px;
+border-radius:10px;
+}
+
+.bar span{
+background:var(--pink);
+height:100%;
+display:block;
+border-radius:10px;
+}
+
+/* CONTACT */
+.contact-info{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.contact-card{
+background:white;
+padding:25px 30px;
+border-radius:15px;
+box-shadow:var(--shadow);
+min-width:260px;
+}
+
+.contact-card h3{
+color:var(--pink);
+margin-bottom:10px;
+}
+
+.contact-card a{
+text-decoration:none;
+color:#444;
+}
+
+/* FOOTER */
+footer{
+padding:25px;
+background:#f1cbd3;
+text-align:center;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+nav ul{
+display:none;
+flex-direction:column;
+position:absolute;
+top:70px;
+right:20px;
+background:white;
+width:220px;
+padding:20px;
+border-radius:12px;
+box-shadow:var(--shadow);
+}
+
+nav ul.active{
+display:flex;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.profile{
+width:130px;
+height:130px;
+}
+
+}
